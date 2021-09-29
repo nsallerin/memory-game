@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 const getAllGames = (_request, response) => {
   db.query(
     `SELECT * FROM game
-      ORDER BY attempts DESC`, 
+      ORDER BY time ASC`, 
     (error, results) => {
     if (error) {
       throw error
