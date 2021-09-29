@@ -3,9 +3,8 @@ import { Game } from "./game.js";
 
 const gameContainer = document.getElementById("game-container")
 
-
 try {
-  new Game(gameContainer, 180)
+  new Game(gameContainer)
 } catch (error) {
   console.error(error)
 }

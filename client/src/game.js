@@ -6,7 +6,8 @@ class Game {
    * The Game constructor, whose parameters has to be passed when a new instance is created.
    * @constructor
    * @param {HTMLElement} gameContainer The html element the game will be inserted in
-   * @param {number} gameConfig.duration The duration (in seconds) the player has to complete the game, which is displayed by the progress bar
+   * @param {number} gameConfig.duration The duration (in seconds, 180 by default if no parameter is given) the player has to complete the game,
+   * which is displayed by the progress bar
    */
   constructor(gameContainer, gameDuration) {
     this.fruitsList = getRandomFruitsList()
@@ -192,6 +193,12 @@ class Game {
       const emptyScoresTable = this.createScoresTable([])
       this.gameContainer.appendChild(emptyScoresTable)
     }).finally(() => {
+      input.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") {
+          console.log("ENTER")
+          startButton.click()
+        }
+      })
       input.focus()
     })
   }
@@ -283,7 +290,7 @@ class Game {
 
   /**
    * Handles the game start when the player click on the 'Start Game' button
-   * @param {string} playerName The player name retrieved from the landing page form input
+   * @param {string} playerName The player name string retrieved from the landing page form input
    * (by default 'John Doeuf' if no parameter is passed)
    */
   startGame(playerName = "John Doeuf"){

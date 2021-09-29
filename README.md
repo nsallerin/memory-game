@@ -12,6 +12,13 @@ The *Postgressql* database is started in a *Docker* container with the configura
 
 Migrations are handled with the `server/database/init.sql` file whose queries are automatically run during the first `docker-compose` launch.
 
+To rerun the migrations:
+
+```bash
+docker-compose down
+docker-compose up
+```
+
 Here are the columns created for the `game` table:
 
 | Field         | Type          
