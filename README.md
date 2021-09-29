@@ -37,7 +37,7 @@ cp client/.env.sample client/.env
 cp server/.env.sample server/.env
 
 # Install Docker
-$ brew install docker
+brew install docker
 
 # Install dependencies
 yarn install
