@@ -58,7 +58,7 @@ class Game {
 
     } else {
       setTimeout(() => {
-        // If the match fails, keeps the grid frezzed for 1 second and turns over the two cards
+        // If the match fails, keeps the grid freezed for 1 second and turns over the two cards
         this.resetAttempt()
       }, 1000)
     }
@@ -267,7 +267,7 @@ class Game {
    * depending on the game is won or lost and the button which allows the player to start another game
    */
   createEndGameMessage() {
-    const message = this.isGameWon() ? "You won 🤟, congratulation!" : "You lose 😿"
+    const message = this.isGameWon() ? "You win 🤟, congratulation!" : "You lose 😿"
 
     const restartButton = document.createElement("button")
     restartButton.innerText = "Try again"
@@ -311,7 +311,7 @@ class Game {
   }
 
   /**
-   * Handles to end the game and display the result page when the player has successful matched all the pairs 
+   * Handles to end of the game and display the result page when the player has successful matched all the pairs 
    * or when the time is out
    * @param {gameWon} gameWon The boolean which will be saved in the DB to keep track of wether the game was won or lost
    */
