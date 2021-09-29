@@ -1,0 +1,234 @@
+$primary-color: #A9D6E5
+$secondary-color: #61A5C2
+$tertiary-color: #2C7DA0
+$text-color: #013A63
+$fruits-image-path: "../assets/fruits.png"
+  
+body
+  background: $primary-color
+
+#menu
+  height: 200px
+  width: 300px
+  margin: 10% auto
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  font-size: 30px
+  
+  input
+    width: 150px
+    margin: 0 auto
+    border: solid 1px $tertiary-color
+
+    &:-webkit-input-placeholder
+      color: $secondary-color
+
+
+    &:-ms-input-placeholder
+      color: $secondary-color
+
+
+    &:-ms-input-placeholder
+      color: $secondary-color
+
+    &:-moz-placeholder
+      opacity: 1
+      color: $secondary-color
+
+    &:focus
+      border: none !important
+
+
+  input:-moz-placeholder
+    opacity: 1
+    color: $secondary-color
+
+
+  input::placeholder
+    color: $secondary-color
+
+  label
+    color: $text-color
+
+#progress-bar-container
+  width: 100%
+  margin: 10% auto
+  border: solid 3px $tertiary-color
+  border-radius: 20px
+
+#progress-bar
+  height: 15px
+  border: none
+  animation: progress-bar-timer
+  animation-iteration-count: 1
+  animation-timing-function: linear
+  animation-fill-mode: forwards
+
+@keyframes progress-bar-timer
+  0%
+    width: 0%
+    background: $tertiary-color
+  
+  100%
+    width: 100%
+    background: $tertiary-color
+
+#scores-table
+  width: 50%
+  margin: 0 auto
+  color: $text-color
+
+  table
+    margin: 0 auto
+
+  thead
+    height: 30px
+    background-color: $secondary-color
+    color: $text-color
+    font-size: 20px
+
+  th, td
+    min-width: 130px
+    text-align: center
+
+  td
+    background-color: $primary-color
+    font-size: 18px
+
+.start-button
+  width: 120px
+  height: 50px
+  margin: 0 auto
+  background-color: $tertiary-color
+  color: $primary-color
+  border: none
+  border-radius: 5px
+  font-size: 16px
+
+  &:hover
+    cursor: pointer
+
+.no-click
+  pointer-events: none
+  
+.fruits-flexbox
+  margin: 10% auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  width: 800px
+
+.fruit-card
+  margin: 7px
+  list-style-type: none
+  height: 100px
+  width: 100px
+  background-image: url($fruits-image-path)
+  border-radius: 10px
+  box-shadow: 3px 3px 3px $tertiary-color
+  transition: transform 0.3s
+
+  &:hover
+    cursor: pointer
+    transform: scale3d(1.08, 1.08, 1.08)
+
+  &.revealed
+    transform: scale3d(1.08, 1.08, 1.08)
+    pointer-events: none
+
+  &.unrevealed
+    background: linear-gradient(160deg, $secondary-color 0%, #ffffff 450%)
+
+  &.red-apple
+    background-position: 0px 0px
+  
+  &.banana
+    background-position: 0px -100px
+  
+  &.orange
+    background-position: 0px -200px
+  
+  &.lime
+    background-position: 0px -300px
+
+  
+  &.pomegranate
+    background-position: 0px -400px
+  
+  
+  &.apricot
+    background-position: 0px -500px
+  
+  
+  &.lemon
+    background-position: 0px -600px
+  
+  
+  &.strawberry
+    background-position: 0px -700px
+  
+  
+  &.green-apple
+    background-position: 0px -800px
+  
+  
+  &.peach
+    background-position: 0px -900px
+  
+  
+  &.grape
+    background-position: 0px -1000px
+  
+  
+  &.watermelon
+    background-position: 0px -1100px
+  
+  
+  &.plum
+    background-position: 0px -1200px
+  
+  
+  &.pear
+    background-position: 0px -1300px
+  
+  
+  &.cherry
+    background-position: 0px -1400px
+  
+  
+  &.raspberry
+    background-position: 0px -1500px
+  
+  
+  &.mango
+    background-position: 0px -1600px
+  
+  
+  &.yellow-cherry
+    background-position: 0px -1700px
+
+.end-message-container
+  width: 200px
+  margin: 5% auto
+  text-align: center
+  font-size: 20px
+  color: $text-color
+
+.score-message-wrapper
+  margin: 5% auto
+
+.restart-button
+  width: 120px
+  height: 50px
+  margin: 10% auto
+  background-color: $tertiary-color
+  color: $primary-color
+  border: none
+  border-radius: 5px
+  font-size: 16px
+
+  &:hover
+    cursor: pointer

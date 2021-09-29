@@ -1,0 +1,10 @@
+{
+  "name": "memory-game",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "test": "yarn workspace client test"
+  }
+}
